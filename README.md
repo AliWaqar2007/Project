@@ -1,1 +1,5 @@
-# Project
+This code is a simple program to collect and display information about a cricket match, including details about the performance of batsmen and bowlers.
+Firstly, the user is prompted to enter the total number of overs bowled and the number of batsmen who batted. If the number of batsmen is more than 11, it prints an error message. Otherwise, it proceeds to get the number of bowlers. Initialize variables to store total score, wickets, overs, balls played, and lists to store data for batsmen and bowlers.
+For each bowler, it collects information such as name, overs bowled, runs conceded, wickets taken, and extras. It then adds this data to the list ‘bowlers_data’ and updates the total score and wickets.
+For each batsman, it collects information such as name, runs scored, balls played, sixes, and fours. It performs some input validations to ensure the number of balls played is within the total overs limit.
+Then, it prints the total score and wickets. Then, it displays the performance of batsmen and bowlers by iterating through their respective data lists.
