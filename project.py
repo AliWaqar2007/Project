@@ -39,7 +39,7 @@ for i in range(no_of_batsmen):
         six = int(input("Enter the number of sixes he hit: "))
         four = int(input("Enter the number of fours he hit: "))
 
-    strike_rate = (batsman_score/bowls_played)*100
+    strike_rate = round((batsman_score/bowls_played)*100)
     batsman_data = [batsman_name, batsman_score, bowls_played, six, four, strike_rate]
     batsmen_data.append(batsman_data)
     total_score += batsman_score
