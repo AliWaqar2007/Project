@@ -35,29 +35,35 @@ for i in range(no_of_batsmen):
     
     if bowls_played>(t_overs*6):
         print("Sorry! Batsman cannot play balls more than",(t_overs*6))
-    elif t_bowls!=(t_overs*6):
-        print("Bowls played by all batters should sum up to",(t_overs*6))
     else:    
         six = int(input("Enter the number of sixes he hit: "))
         four = int(input("Enter the number of fours he hit: "))
 
-    batsman_data = [batsman_name, batsman_score, bowls_played, six, four]
+    strike_rate = (batsman_score/bowls_played)*100
+    batsman_data = [batsman_name, batsman_score, bowls_played, six, four, strike_rate]
     batsmen_data.append(batsman_data)
     total_score += batsman_score
 
-print("\n\nTotal score and wickets in",t_overs,": ",total_score,"/",total_wickets,"\n\n")
-print("Batting side performance:\n")
-for batsman_data in batsmen_data:
-    print("\nBatsman name:", batsman_data[0])
-    print("Batsman score:", batsman_data[1])
-    print("Bowls Played:", batsman_data[2])
-    print("Six:", batsman_data[3])
-    print("Four:", batsman_data[4])
+run_rate = total_score/t_overs
 
-print("\nBowling side performance:\n")
-for bowler_data in bowlers_data:
-    print("\nBowler name:", bowler_data[0])
-    print("Overs bowled:", bowler_data[1])
-    print("Runs conceded:", bowler_data[2])
-    print("Wickets taken:", bowler_data[3])
-    print("Extras:", bowler_data[4])
+if t_bowls!=(t_overs*6):
+    print("Bowls played by all batters should sum up to",(t_overs*6))
+else:
+    print("\n\nTotal score and wickets in",t_overs,": ",total_score,"/",total_wickets,"\n\n")
+    print("\n\nRun Rate:", run_rate)
+    print("Batting side performance:\n")
+    for batsman_data in batsmen_data:
+        print("\nBatsman name:", batsman_data[0])
+        print("Batsman score:", batsman_data[1])
+        print("Bowls Played:", batsman_data[2])
+        print("Six:", batsman_data[3])
+        print("Four:", batsman_data[4])
+        print("Strike Rate:", batsman_data[5])
+
+    print("\nBowling side performance:\n")
+    for bowler_data in bowlers_data:
+        print("\nBowler name:", bowler_data[0])
+        print("Overs bowled:", bowler_data[1])
+        print("Runs conceded:", bowler_data[2])
+        print("Wickets taken:", bowler_data[3])
+        print("Extras:", bowler_data[4])
